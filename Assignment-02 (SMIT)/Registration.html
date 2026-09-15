@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    background: white;
+    font-family: "Times New Roman", serif;
+    color: #222;
+}
+
+.form-container {
+    width: 850px;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* SMIT Logo */
+.logo {
+    display: block;
+    width: 150px;
+    margin: 0 auto 35px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 35px;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    min-height: 25px;
+}
+
+.label {
+    width: 165px;
+    font-size: 16px;
+    padding-top: 4px;
+}
+
+.field {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    border: 1px solid #bbb;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 160px;
+    height: 30px;
+}
+
+textarea {
+    width: 275px;
+    height: 70px;
+    resize: vertical;
+}
+
+.hint {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.radio-group,
+.checkbox-group {
+    padding-top: 4px;
+    font-size: 15px;
+}
+
+/* Qualification Table */
+.qualification {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.qualification th,
+.qualification td {
+    text-align: left;
+    padding: 3px 5px;
+}
+
+.qualification th {
+    font-weight: bold;
+}
+
+.qualification input {
+    width: 100%;
+    height: 27px;
+    border: 1px solid #bbb;
+}
+
+.notes {
+    text-align: center;
+    font-size: 13px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    padding: 4px 12px;
+    margin: 0 2px;
+    font-family: "Times New Roman", serif;
+    cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+
+    body {
+        padding: 15px 8px;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .hint {
+        display: inline-block;
+        margin-top: 4px;
+    }
+
+    .qualification {
+        font-size: 12px;
+    }
+}
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+
+    <!-- SMIT Logo -->
+    <img src="smit-logo.jpeg" alt="SMIT Logo" class="logo">
+
+    <h2>STUDENT REGISTRATION FORM</h2>
+
+    <form>
+
+        <!-- First Name -->
+        <div class="row">
+            <div class="label">FIRST NAME</div>
+
+            <div class="field">
+                <input type="text"
+                       name="firstName"
+                       maxlength="30"
+                       placeholder="Enter the First Name"
+                       required>
+
+                <span class="hint">
+                    (max 30 characters a-z and A-Z)
+                </span>
+            </div>
+        </div>
+
+
+        <!-- Last Name -->
+        <div class="row">
+            <div class="label">LAST NAME</div>
+
+            <div class="field">
+                <input type="text"
+                       name="lastName"
+                       maxlength="30"
+                       placeholder="Enter the Last Name"
+                       required>
+
+                <span class="hint">
+                    (max 30 characters a-z and A-Z)
+                </span>
+            </div>
+        </div>
+
+
+        <!-- Date of Birth -->
+        <div class="row">
+            <div class="label">DATE OF BIRTH</div>
+
+            <div class="field">
+                <input type="date" name="dob">
+            </div>
+        </div>
+
+
+        <!-- Email -->
+        <div class="row">
+            <div class="label">EMAIL ID</div>
+
+            <div class="field">
+                <input type="email"
+                       name="email"
+                       placeholder="Enter the Email Address">
+            </div>
+        </div>
+
+
+        <!-- Mobile -->
+        <div class="row">
+            <div class="label">MOBILE NUMBER</div>
+
+            <div class="field">
+                <input type="tel"
+                       name="mobile"
+                       maxlength="10"
+                       placeholder="Enter the Mobile Number">
+
+                <span class="hint">
+                    (10 Digits Numbers)
+                </span>
+            </div>
+        </div>
+
+
+        <!-- Gender -->
+        <div class="row">
+            <div class="label">GENDER</div>
+
+            <div class="field radio-group">
+
+                <label>
+                    <input type="radio"
+                           name="gender"
+                           value="Male">
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="gender"
+                           value="Female">
+                    Female
+                </label>
+
+            </div>
+        </div>
+
+
+        <!-- Address -->
+        <div class="row">
+
+            <div class="label">ADDRESS</div>
+
+            <div class="field">
+                <textarea name="address"></textarea>
+            </div>
+
+        </div>
+
+
+        <!-- City -->
+        <div class="row">
+
+            <div class="label">CITY</div>
+
+            <div class="field">
+
+                <input type="text"
+                       name="city"
+                       maxlength="30"
+                       placeholder="Enter the City Name">
+
+                <span class="hint">
+                    (max 30 characters a-z and A-Z)
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Pin Code -->
+        <div class="row">
+
+            <div class="label">PIN CODE</div>
+
+            <div class="field">
+
+                <input type="text"
+                       name="pin"
+                       maxlength="6"
+                       placeholder="Enter the Pin Code">
+
+                <span class="hint">
+                    (6 Digits Numbers)
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- State -->
+        <div class="row">
+
+            <div class="label">STATE</div>
+
+            <div class="field">
+
+                <input type="text"
+                       name="state"
+                       maxlength="30"
+                       placeholder="Enter the State">
+
+                <span class="hint">
+                    (max 30 characters a-z and A-Z)
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Country -->
+        <div class="row">
+
+            <div class="label">COUNTRY</div>
+
+            <div class="field">
+
+                <input type="text"
+                       name="country"
+                       placeholder="Enter the Country Name">
+
+            </div>
+
+        </div>
+
+
+        <!-- Hobbies -->
+        <div class="row">
+
+            <div class="label">HOBBIES</div>
+
+            <div class="field checkbox-group">
+
+                <label>
+                    <input type="checkbox" name="hobbies">
+                    Drawing
+                </label>
+
+                <label>
+                    <input type="checkbox" name="hobbies">
+                    Singing
+                </label>
+
+                <label>
+                    <input type="checkbox" name="hobbies">
+                    Dancing
+                </label>
+
+                <label>
+                    <input type="checkbox" name="hobbies">
+                    Sketching
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="checkbox" name="hobbies">
+                    Others
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- Qualification -->
+        <div class="row">
+
+            <div class="label">
+                QUALIFICATION
+            </div>
+
+            <div class="field">
+
+                <table class="qualification">
+
+                    <thead>
+
+                        <tr>
+                            <th>Sl.No.</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of passing</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Class X</td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>2</td>
+                            <td>Class XII</td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>3</td>
+                            <td>Graduation</td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>4</td>
+                            <td>Masters</td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <div class="notes">
+                    (10 char max)
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    upto 2 decimal
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Courses -->
+        <div class="row">
+
+            <div class="label">
+                COURSES<br>
+                APPLIED FOR
+            </div>
+
+            <div class="field">
+
+                <select name="course">
+
+                    <option value="">
+                        Select any course
+                    </option>
+
+                    <option>
+                        Web & App Development
+                    </option>
+
+                    <option>
+                        Graphic Designing
+                    </option>
+
+                    <option>
+                        Digital Marketing
+                    </option>
+
+                    <option>
+                        Python Programming
+                    </option>
+
+                    <option>
+                        Artificial Intelligence
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- Upload Picture -->
+        <div class="row">
+
+            <div class="label">
+                Upload your pic<br>
+
+                <small>
+                    (only .png, .jpg, .jpeg<br>
+                    formats allow)
+                </small>
+            </div>
+
+            <div class="field">
+
+                <input type="file"
+                       name="picture"
+                       accept=".png,.jpg,.jpeg">
+
+            </div>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button type="submit">
+                Submit
+            </button>
+
+            <button type="reset">
+                Reset
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
